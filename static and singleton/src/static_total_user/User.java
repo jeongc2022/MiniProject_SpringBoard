@@ -1,4 +1,4 @@
-package static_panaltybin;
+package static_total_user;
 
 public class User {
 	
