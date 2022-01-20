@@ -2,6 +2,8 @@ package net.oracle.jdbc.test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class NamecardSelect {
@@ -29,9 +31,38 @@ public class NamecardSelect {
 			con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:ORCL","scott","tiger");
 			// 3. SQL 실행
 			stmt = con.createStatement();
-			rs = stmt.executeQuery(sql)
-		} catch (Exception e) {
+			rs = stmt.executeQuery(sql);
+			while(rs.next()) {
+				int no = rs.getInt("no");
+				String name = rs.getString("name");
+				String mobile = rs.getString("mobile");
+				String	email = rs.getString("email");
+				String company = rs.getString("company");
+				System.out.println(no + "|" + name + "|" + mobile + "|" + email + "|" + company);
+			}
+		} catch (SQLException e) {
 			// TODO: handle exception
+			e.printStackTrace();
+			System.out.println(sql);
+		} finally {
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 }
