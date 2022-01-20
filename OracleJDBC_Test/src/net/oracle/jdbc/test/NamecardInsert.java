@@ -22,11 +22,11 @@ public class NamecardInsert {
 		Connection con = null;
 		Statement stmt = null;
 		String sql = "INSERT INTO NAMECARD VALUES " +
-				"(SEQ_NAMECARD_NO.NEXTVAL," +
-				"'홍길동'," +
-				"'011-0000-0000'" +
-				"'hongkildong@gmail.org'," +
-				"'활빈당')";
+	            "(SEQ_NAMECARD_NO.NEXTVAL," +
+	            "'홍길동'," +
+	            "'011-0000-0000'," +
+	            "'hongkildong@gmail.org'," +
+	            "'활빈당')";
 		
 		try {
 			// Connection 맺기
