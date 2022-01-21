@@ -3,7 +3,7 @@ package net.jdbc_dbcp.util;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
-
+// 1
 public class Log {		// 1. 로그 파일에 로그 메시지를 입력하기 위한 클래스
 	public String logFile = "C:/jdbc/connection-pool.log";
 	FileWriter fw = null;
