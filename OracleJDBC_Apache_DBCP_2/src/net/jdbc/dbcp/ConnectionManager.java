@@ -8,7 +8,7 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
-public class ConnectionManager {	// 4
+public abstract class ConnectionManager {	// 4
 	protected String poolName, dbServer, dbName, port, userID, passwd;
 	protected int maxConn, initConn, maxWait;
 	protected DataSource dataSource;
