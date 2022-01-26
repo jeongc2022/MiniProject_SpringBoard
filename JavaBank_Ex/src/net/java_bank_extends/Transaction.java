@@ -64,11 +64,11 @@ public class Transaction {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(transactionDate);
+		sb.append(this.transactionDate);
 		sb.append("|");
-		sb.append(transactionTime);
+		sb.append(this.transactionTime);
 		sb.append("|");
-		sb.append(kind);
+		sb.append(this.kind);
 		sb.append("|");
 		sb.append(Account.NUMBER_FORMAT.format(amount));
 		sb.append("|");

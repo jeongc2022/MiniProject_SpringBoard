@@ -83,14 +83,14 @@ public class Account {
 	}
 	
 	public void setBalance(double balance) {
-		this.accountNo = accountNo;
+		this.balance = balance;
 	}
 	
 	public List<Transaction> getTransactions() {
 		return transactions;
 	}
 	
-	public void setTransactions(List<Transaction> transaction) {
+	public void setTransactions(List<Transaction> transactions) {
 		this.transactions = transactions;
 	}
 	
