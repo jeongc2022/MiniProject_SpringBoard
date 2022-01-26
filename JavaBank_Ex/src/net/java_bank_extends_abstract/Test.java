@@ -1,4 +1,4 @@
-package net.java_bank_extends;
+package net.java_bank_extends_abstract;
 
 import java.util.List;
 
@@ -29,7 +29,7 @@ public class Test {
 		//2. 101 계좌에 10,000원을 입금한다.
 		System.out.println("2. 101계좌에 10,000원을 입금한다.");
 		Account hong = bank.getAccount("101");
-		hong.deposit(10000);
+		hong.deposit(10000); 
 		System.out.println(ACCOUNTS_HEADING);
 		System.out.println(hong);
 		
